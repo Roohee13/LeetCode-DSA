@@ -8,17 +8,13 @@ class Solution {
                 map.put(nums[i],1);
             }
         }
-
-        int majority= nums.length/2;
+        int majority=nums.length/2;
         int result=0;
-
-        for(Map.Entry<Integer,Integer> entry : map.entrySet()){
-            if(entry.getValue() > majority){
-                result= entry.getKey();
-
+        for(Map.Entry<Integer,Integer> entry: map.entrySet()){
+            if(entry.getValue()> majority){
+                result=entry.getKey();
             }
         }
-
         return result;
     }
 }
